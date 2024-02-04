@@ -4,12 +4,13 @@ import { Oswald } from "next/font/google";
 import "./globals.css";
 import { useEffect, useState } from "react";
 import ScrollImages from "./component/scroll-images";
+import { backgroundColorClass } from "./component/data";
 
 const inter = Oswald({ weight: ["700"], subsets: ["latin"] });
 
 export default function Home() {
   const [currentView, setCurrentView] = useState(0);
-  const issueColors = ["bg-pink-500", "bg-white", "bg-green-500", "bg-orange-500", "bg-sky-500", "bg-red-500", "bg-violet-500"];
+  const issueColors = backgroundColorClass;
   useEffect(() => {
     const scrollEl = document.querySelector(".scroll-el") as HTMLElement;
     if (scrollEl) {
