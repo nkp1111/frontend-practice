@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function SingleImageHolder({ index, imageColor }: { index: number, imageColor: string }) {
   return (
-    <div className='h-[100vh] flex flex-col items-center p-5'>
+    <div className='h-[80vh] md:h-[100vh] flex flex-col items-center p-5'>
       <div className='w-[350] h-[450] relative mt-10 rounded-md rounded-e-none shadow-xl'>
         <Image
           src={`https://placehold.co/350x450/${imageColor}/${index === 1 ? "000" : "FFF"}/png?font=Roboto&text=Backstage Talks`}
