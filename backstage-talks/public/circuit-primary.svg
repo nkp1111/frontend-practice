@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="350" height="450" preserveAspectRatio="none" viewBox="0 0 350 450">
+    <g mask="url(&quot;#SvgjsMask1020&quot;)" fill="none">
+        <path d="M0 191.68L10 225.78L20 200.65L30 207.88L40 170.32L50 153.07L60 194.9L70 228.38L80 197.18L90 182.05L100 213.86L110 250.34L120 270.22L130 246.76L140 219.67L150 207.59L160 197.04L170 226.45L180 227.83L190 229.33L200 182.09L210 176.65L220 138.35L230 108.63L240 113.45L250 126.63L260 177.32L270 230.37L280 187.41L290 145.02L300 117.1L310 72.87L320 87.3L330 33.77L340 60L350 77.46" stroke="rgba(15, 157, 88, 1)" stroke-width="2"></path>
+        <path d="M0 191.68L10 225.78L20 200.65L30 207.88L40 170.32L50 153.07L60 194.9L70 228.38L80 197.18L90 182.05L100 213.86L110 250.34L120 270.22L130 246.76L140 219.67L150 207.59L160 197.04L170 226.45L180 227.83L190 229.33L200 182.09L210 176.65L220 138.35L230 108.63L240 113.45L250 126.63L260 177.32L270 230.37L280 187.41L290 145.02L300 117.1L310 72.87L320 87.3L330 33.77L340 60L350 77.46L350 450L0 450z" fill="url(&quot;#SvgjsLinearGradient1021&quot;)"></path>
+    </g>
+    <defs>
+        <mask id="SvgjsMask1020">
+            <rect width="350" height="450" fill="#ffffff"></rect>
+        </mask>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="SvgjsLinearGradient1021">
+            <stop stop-opacity="0.65" stop-color="rgba(15, 157, 88, 1)" offset="0"></stop>
+            <stop stop-opacity="0" stop-color="#55efa4" offset="0.8"></stop>
+        </linearGradient>
+    </defs>
+</svg>

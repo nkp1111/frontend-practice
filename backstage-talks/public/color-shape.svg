@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="350" height="450" preserveAspectRatio="none" viewBox="0 0 350 450">
+    <g mask="url(&quot;#SvgjsMask1008&quot;)" fill="none">
+        <path d="M165.48 328.52a11.23 11.23 0 1 0-2.72-22.29z" fill="#d3b714"></path>
+        <path d="M260.61 174.77a1.24 1.24 0 1 0-2.3-0.93z" stroke="rgba(32, 42, 155, 1)"></path>
+        <path d="M148.34 301.01a20.94 20.94 0 1 0 24.63-33.88z" fill="#037b0b"></path>
+        <path d="M252.69 453.78a24.76 24.76 0 1 0 27.84-40.95z" fill="#d3b714"></path>
+        <path d="M251.46 115.64L277.49 115.64L277.49 118.09L251.46 118.09z" fill="#037b0b"></path>
+        <path d="M6.88 95.74L22 95.74L22 110.86L6.88 110.86z" fill="#e73635"></path>
+        <path d="M148.49 46.91a26.51 26.51 0 1 0 51.54-12.48z" fill="#d3b714"></path>
+        <path d="M206.09 29.35 a33.11 33.11 0 1 0 66.22 0 a33.11 33.11 0 1 0 -66.22 0z" fill="rgba(32, 42, 155, 1)"></path>
+        <path d="M53.67 218.19L53.93 218.19L53.93 244.43L53.67 244.43z" fill="#e73635"></path>
+        <path d="M132.68 455.17a12.37 12.37 0 1 0 19.81-14.82z" stroke="#d3b714"></path>
+        <path d="M91.4 309.08L93.71 309.08L93.71 322.27L91.4 322.27z" stroke="rgba(32, 42, 155, 1)"></path>
+        <path d="M327.44 134.73L351.43 134.73L351.43 158.72L327.44 158.72z" fill="#e73635"></path>
+        <path d="M9.71 7.27a20.25 20.25 0 1 0 12.28 38.59z" fill="#e73635"></path>
+        <path d="M51.32 257.28L80.94 257.28L80.94 286.9L51.32 286.9z" fill="#d3b714"></path>
+        <path d="M40.76 298.33L45.47 298.33L45.47 325.29L40.76 325.29z" stroke="#e73635"></path>
+        <path d="M10.29 384.74L26.93 384.74L26.93 401.38L10.29 401.38z" stroke="#e73635"></path>
+        <path d="M166.71 443.46L175.5 443.46L175.5 451.1L166.71 451.1z" fill="#d3b714"></path>
+    </g>
+    <defs>
+        <mask id="SvgjsMask1008">
+            <rect width="350" height="450" fill="#ffffff"></rect>
+        </mask>
+    </defs>
+</svg>

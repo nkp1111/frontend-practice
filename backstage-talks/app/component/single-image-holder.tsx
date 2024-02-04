@@ -1,17 +1,24 @@
 import React from 'react'
 import BarcodeSvg from './barcode-svg'
 import Image from 'next/image'
+import SingleImageBackground from './single-image-background'
+
 
 export default function SingleImageHolder({ index, imageColor }: { index: number, imageColor: string }) {
   return (
     <div className='h-[80vh] md:h-[100vh] flex flex-col items-center p-5'>
       <div className='w-[350] h-[450] relative mt-10 rounded-md rounded-e-none shadow-xl'>
+
+        <div className='absolute top-0 left-0 w-full bottom-0 -z-0'>
+          <SingleImageBackground index={index} />
+        </div>
+
         <Image
           src={`https://placehold.co/350x450/${imageColor}/${index === 1 ? "000" : "FFF"}/png?font=Roboto&text=Backstage Talks`}
           alt={"book image"}
           width={350}
           height={450}
-          className='transition-all duration-200 ease-linear'
+          className='transition-all duration-200 ease-linear z-10'
         />
         <div className={`absolute top-0 left-2 bottom-0 ${index === 1 ? "border-black" : "border-white"} border opacity-10 transition-all duration-200 ease-linear`}></div>
         <small className={`absolute top-2 right-2 text-xs ${index === 1 ? "text-black" : "text-white"} transition-all duration-200 ease-linear`}>
