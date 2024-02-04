@@ -23,7 +23,7 @@ export default function Home() {
       </div>
 
       {/* scroll images  */}
-      <ScrollImages />
+      <ScrollImages currentView={currentView} />
 
       <div className="flex-1 flex justify-between items-end">
         <div className="flex-1">
