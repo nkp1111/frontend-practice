@@ -14,7 +14,7 @@ export default function Header() {
     // on certain section background custom-dark
   }, []);
   return (
-    <header className='z-40 relative bg-transparent text-custom-light font-bold shadow-sm py-5'>
+    <header className='z-40 relative bg-custom-dark bg-opacity-20 text-custom-light font-bold shadow-sm py-5 blur_background'>
       <PaddingX>
         <nav className="navbar md:justify-between justify-center flex-wrap gap-4 gap-y-2 items-center sm:flex-row flex-col">
           <div className="">
