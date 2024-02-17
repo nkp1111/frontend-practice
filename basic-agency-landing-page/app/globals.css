@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
+:root {
+  --accept-cookie-text: "Accept cookies";
+}
+
 .blur_background {
   /* From https://css.glass */
 backdrop-filter: blur(4.7px);
