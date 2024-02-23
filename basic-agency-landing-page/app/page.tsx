@@ -1,6 +1,7 @@
 import Footer from "@/components/footer";
 import Header from "@/components/front-page/header";
 import VideoBackground from "@/components/front-page/video-background";
+import AwardSection from "@/components/section/award-section";
 
 export default function Home() {
 
@@ -10,6 +11,7 @@ export default function Home() {
         <VideoBackground />
         <Header />
       </div>
+      <AwardSection />
       <Footer />
     </main>
   );
