@@ -1,14 +1,14 @@
 import PaddingX from '@/components/general/paddingX'
 import React from 'react'
 import { workData } from '@/constant/works-data'
-import Image from 'next/image'
+import SingleWork from './single-work'
 
 export default function WorkSection() {
   return (
     <section className='bg-custom-light'>
-      <h2 className='text-center invisible' aria-label='home award section'>Works section</h2>
+      <h2 className='text-center invisible' aria-label='works section'>Works section</h2>
       <PaddingX>
-        <div className='flex flex-col text-custom-dark py-20 border-y-2 border-custom-dark items-start'>
+        <div className='flex flex-col text-custom-dark py-20 pb-32 border-y-2 border-custom-dark items-start'>
           <div className='w-full flex md:flex-row flex-col gap-10'>
             <div className='flex-1'>
               <p className='text-4xl font-medium lg:w-3/4'>
@@ -26,26 +26,11 @@ export default function WorkSection() {
 
           <div className="flex justify-between items-start gap-6 w-full mt-20">
             {workData.map(item => (
-              <article key={item.id} className='flex flex-col-reverse flex-1'>
-                <div>
-                  <h3 className='font-bold text-xl mt-5 mb-4'>{item.title}</h3>
-                  <p dangerouslySetInnerHTML={{ __html: item.description }} className='text-sm'></p>
-                </div>
-                <div className='w-full'>
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={300}
-                    height={700}
-                    className='object-cover object-center w-full md:h-[600px] sm:h-[300px] h-[200px]'
-                  />
-                </div>
-              </article>
+              <SingleWork key={item.id} work={item} />
             ))}
           </div>
         </div>
       </PaddingX>
-
     </section>
   )
 }
