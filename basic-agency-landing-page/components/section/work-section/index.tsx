@@ -9,9 +9,9 @@ export default function WorkSection() {
       <h2 className='text-center invisible' aria-label='home award section'>Works section</h2>
       <PaddingX>
         <div className='flex flex-col text-custom-dark py-20 border-y-2 border-custom-dark items-start'>
-          <div className='w-full flex md:flex-row flex-col'>
+          <div className='w-full flex md:flex-row flex-col gap-10'>
             <div className='flex-1'>
-              <p className='text-4xl font-medium md:w-3/4'>
+              <p className='text-4xl font-medium lg:w-3/4'>
                 BASIC/DEPT® is a global branding and digital design agency building products, services, and eCommerce experiences that turn cultural values into company value.
               </p>
 
@@ -20,7 +20,7 @@ export default function WorkSection() {
 
             </div>
             <div className='flex-1 text-end'>
-              <p className='text-8xl sm:text-9xl md:text-[180px] flex items-center justify-center font-extrabold'>B/D <span className='font-mono border-[12px] border-custom-dark rounded-full w-28 h-28 flex items-center justify-center text-7xl sm:text-8xl'>R</span></p>
+              <p className='text-8xl sm:text-9xl md:text-[180px] flex items-center justify-end font-extrabold'>B/D <span className='font-mono border-[12px] border-custom-dark rounded-full w-20 sm:w-28 h-20 sm:h-28 flex items-center justify-center text-6xl sm:text-8xl'>R</span></p>
             </div>
           </div>
 
