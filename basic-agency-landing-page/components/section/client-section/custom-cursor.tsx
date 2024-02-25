@@ -1,14 +1,20 @@
 import React from 'react'
 
 interface CustomCursorParams {
-  cursorRef: React.RefObject<HTMLDivElement>, mousePressed: boolean
+  cursorRef: React.RefObject<HTMLDivElement>, mousePressed: boolean, cursorOnLink: boolean
 }
 
-export default function CustomCursor({ cursorRef, mousePressed }: CustomCursorParams) {
+export default function CustomCursor({ cursorRef, mousePressed, cursorOnLink }: CustomCursorParams) {
+  /**
+   * - Custom cursor
+   * - follow mouse cursor, using ref pointer
+   * - On mouse press change shape 
+   * - when cursor on top of links, it becomes transparent
+   */
   return (
-    <div className={`flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center`} ref={cursorRef}>
+    <div className={`flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center ${cursorOnLink ? "opacity-50" : "opacity-100"}`} ref={cursorRef}>
       <div className={`rounded-full bg-custom-cream text-custom-dark shadow-sm flex justify-center items-center font-semibold text-center uppercase transition-all duration-300 ease-linear ${mousePressed ? "w-16 h-16" : "w-28 h-28 "}`}>
-        {mousePressed ? "" : " Drag"}
+        {mousePressed ? "" : cursorOnLink ? "" : "Drag"}
       </div>
 
       {/* show conditionally on mousePressed true  */}

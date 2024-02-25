@@ -11,26 +11,36 @@ interface ClientParams {
     description: string;
     icon: any;
   },
-  cursorCoord: { x: number, y: number }
+  cursorCoord: { x: number, y: number },
+  setCursorOnLink: React.Dispatch<React.SetStateAction<boolean>>,
 }
 
-export default function SingleClient({ client, cursorCoord }: ClientParams) {
-  const [cursorOnLink, setCursorOnLink] = useState<Element | null>(null);
+export default function SingleClient({ client, cursorCoord, setCursorOnLink }: ClientParams) {
 
   useEffect(() => {
+    // TODO: add link navigation on click 
+
     const clientLinks = document.querySelectorAll(".client-link");
-    console.log(clientLinks)
+    let isOnLink = false;
     for (let i = 0; i < clientLinks.length; i++) {
       const link = clientLinks[i];
-      console.log(cursorCoord, link.getBoundingClientRect())
       const { x, y, width, height } = link.getBoundingClientRect();
+      let pad = 1;
+      let lowX = Math.floor(x - (width * pad));
+      let highX = Math.floor(x + (width * pad));
+      let lowY = Math.floor(y - (height * pad));
+      let highY = Math.floor(y + (height * pad));
+      if (cursorCoord.x >= lowX && cursorCoord.x <= highX && cursorCoord.y >= lowY && cursorCoord.y <= highY) {
+        isOnLink = true;
+      }
     }
-  }, []);
 
-  useEffect(() => {
-    console.log(cursorOnLink)
-  }, [cursorOnLink]);
-
+    if (isOnLink) {
+      setCursorOnLink(() => true)
+    } else {
+      setCursorOnLink(() => false)
+    }
+  });
 
   return (
     <article className='flex flex-col-reverse md:w-1/3 sm:w-1/2 w-full flex-shrink-0 focus:ring-0 focus:outline-none transition-all duration-300 ease-linear'>
