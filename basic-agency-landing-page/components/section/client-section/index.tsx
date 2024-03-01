@@ -89,11 +89,11 @@ export default function ClientSection() {
     // direction "left" slides client article "right" direction
     if (movementX < 0) setCurrentArticlePos("right");
 
-    // only allow client slide every 2s for better performance
+    // only allow client slide every 100ms for better performance
     setChangeClientPos(() => false)
     setTimeout(() => {
       setChangeClientPos(() => true);
-    }, 500)
+    }, 100)
   }
 
 
