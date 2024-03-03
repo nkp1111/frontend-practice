@@ -1,25 +1,58 @@
 import React from 'react'
+import PaddingX from '../general/paddingX'
+import ContactForm from './contact-form'
+import { footerData } from '@/constant/footer-data'
 
 export default function Footer() {
   return (
-    <footer className='fixed bottom-0 left-0 right-0 bg-custom-dark shadow-inner flex text-custom-light p-6 py-2 gap-4 items-center md:flex-row flex-col'>
-      <div className='flex-1 justify-start flex gap-4 relative'>
-        {/* footer logo */}
-        <div className='font-bold items-center flex gap-1 text-lg ms-16'>B/D <span className='rounded-full border border-gray-50 aspect-square p-1 w-4 h-4 items-center font-mono text-xs inline-flex justify-center'>R</span></div>
+    <footer className='min-h-screen bg-custom-dark text-custom-light py-20 pb-28 md:pb-16 relative flex justify-between flex-col gap-20'>
+      <PaddingX>
+        <div className='flex flex-col md:gap-20 gap-14'>
+          <div className='flex md:flex-row flex-col gap-10 font-medium text-3xl'>
+            <p className="flex-1">B/D®</p>
+            <p className="flex-1 leading-none">We collaborate with ambitious brands and people. Let&apos;s build.<br />
+              <a href="mailto:neerajp4321@gmail.com" className='underline'>neerajp4321@gmail.com</a></p>
+          </div>
 
-        <p className='text-xs uppercase text-wrap lg:w-1/2 md:w-2/3 w-full'>This website uses cookies to ensure you <br />get the best experience. <a href="#" className='underline hover:no-underline'>Privacy policy</a></p>
-
-        {/* settings  */}
-        <div className='absolute left-0 -top-7 bottom-full w-14 h-14 aspect-square rounded-full bg-black p-2 fill-custom-light shadow-sm cursor-pointer tooltip' data-tip="Settings">
-          <svg className='hover:scale-105 transition-all duration-300 ease-linear' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.9 2.999A1.9 1.9 0 1 1 12 1.1a1.9 1.9 0 0 1 1.9 1.899zM13.544 6h-3.088a1.855 1.855 0 0 0-1.8 1.405l-1.662 6.652a.667.667 0 0 0 .14.573.873.873 0 0 0 .665.33.718.718 0 0 0 .653-.445L10 9.1V13l-.922 9.219a.71.71 0 0 0 .707.781h.074a.69.69 0 0 0 .678-.563L12 14.583l1.463 7.854a.69.69 0 0 0 .678.563h.074a.71.71 0 0 0 .707-.781L14 13V9.1l1.548 5.415a.718.718 0 0 0 .653.444.873.873 0 0 0 .665-.329.667.667 0 0 0 .14-.573l-1.662-6.652A1.855 1.855 0 0 0 13.544 6z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+          <div className='flex md:flex-row flex-col gap-10'>
+            <div className="flex-1">
+              <p className='flex items-center gap-2'><CustomDot /> STAY IN THE KNOW</p>
+              <ContactForm />
+            </div>
+            <div className="flex-1 flex gap-5 justify-between flex-wrap">
+              {Object.keys(footerData).map(key => (
+                <article key={key}>
+                  <h3 className='font-medium text-lg uppercase flex items-center gap-2'><CustomDot /> {key}</h3>
+                  <ul className='mt-5'>
+                    {footerData[key as any as "social" | "initiatives" | "offices"].map(item => (
+                      <li key={item.id}>
+                        <a href={item.link} className='capitalize hover:underline mt-1'>{item.name}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="md:ms-auto md:justify-end justify-center gap-4 flex items-center">
-        <button type="button" className={`btn relative rounded-full px-9 text-custom-light border border-custom-light py-1 btn-sm uppercase bg-transparent transition-all duration-300 ease-linear overflow-hidden
-         before:bg-custom-light before:h-0 hover:before:h-full before:w-full before:absolute before:top-full hover:before:top-0 before:left-0 before:rounded-full before:transition-all before:duration-300 before:ease-linear before:text-custom-dark before:flex before:items-center before:justify-center hover:before:content-[var(--accept-cookie-text)]`}>Accept cookies</button>
-        {/* footer close button  */}
-        <button type="button" className='btn-circle'>&#10006;</button>
+      </PaddingX>
+
+      <div className='bg-stone-900 py-4'>
+        <PaddingX>
+          <div className='flex justify-between w-full sm:flex-row flex-col items-center text-[10px]'>
+            <span className='bg-custom-dark text-start '>BASIC/DEPT®, INC 10 - 24©</span>
+            <span className='bg-custom-dark text-center '>EASY TO UNDERSTAND, IMPOSSIBLE TO IGNORE.™</span>
+            <span className='bg-custom-dark text-end '>TERMS, PRIVACY POLICY</span>
+          </div>
+        </PaddingX>
       </div>
     </footer>
+  )
+}
+
+
+export function CustomDot() {
+  return (
+    <div className='w-4 h-4 bg-custom-light rounded-full'></div>
   )
 }
