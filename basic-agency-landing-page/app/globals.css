@@ -6,6 +6,8 @@
 :root {
   --accept-cookie-text: "Accept cookies";
   --see-work-text: "See the work";
+  --about-us-text: "About us";
+  --view-all-text: "View all";
 }
 
 .blur_background {
