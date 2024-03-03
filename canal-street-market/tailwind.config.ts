@@ -9,10 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+
       },
+      colors: {
+        custom_blue: "#5ea3ec",
+        custom_red: "#f64444",
+        custom_yellow: "#ffb400",
+      },
+      // custom transition for project
+      transitionProperty: {
+        "custom-transition": "all",
+      },
+      transitionDuration: {
+        "custom-transition": "300",
+      },
+      transitionTimingFunction: {
+        "custom-transition": "linear",
+      }
     },
   },
   plugins: [],
