@@ -4,6 +4,7 @@ import VideoBackground from "@/components/front-page/video-background";
 import AboutUs from "@/components/section/about-section";
 import AwardSection from "@/components/section/award-section";
 import ClientSection from "@/components/section/client-section";
+import NewsSection from "@/components/section/news-section";
 import WorkSection from "@/components/section/work-section";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <WorkSection />
       <ClientSection />
       <AboutUs />
+      <NewsSection />
       <Footer />
     </main>
   );

@@ -10,7 +10,7 @@ export default function AboutUs() {
     <section className='bg-custom-dark text-custom-cream'>
       <h2 className='text-center invisible' aria-label='about us section'>About us section</h2>
       <PaddingX>
-        <div className='flex flex-col  py-20 pb-32 border-y-2 border-custom-dark items-start overflow-hidden max-h-screen'>
+        <div className='flex flex-col  py-16  items-start overflow-hidden max-h-screen '>
           <div className='w-full flex md:flex-row flex-col gap-10'>
             <div className='flex-1'>
               <p className='text-8xl font-bold leading-none selection:text-custom-dark selection:bg-custom-cream'>
@@ -22,7 +22,7 @@ export default function AboutUs() {
               before:bg-custom-cream before:h-full before:w-full before:absolute before:top-full hover:before:top-0 before:left-0 before:rounded-full before:transition-all before:duration-300 before:ease-linear before:text-custom-dark before:flex before:items-center before:justify-center hover:before:content-[var(--about-us-text)] before:font-semibold`}>About us</button>
             </div>
 
-            <div className='flex-1 bg-rose-100 flex justify-center items-center'>
+            <div className='flex-1 bg-custom-dark flex justify-center items-center'>
               <Image
                 src={backImg || "https://source.unsplash.com/random/?magic"}
                 alt={"."}
