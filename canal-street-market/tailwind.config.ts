@@ -25,7 +25,7 @@ const config: Config = {
       },
       transitionTimingFunction: {
         "custom-transition": "linear",
-      }
+      },
     },
   },
   plugins: [],

@@ -39,7 +39,8 @@ export default function Home() {
         <Community setActivePage={setActivePage} />
       </div>
 
-      <HeaderHamburger setActivePage={setActivePage} smallScreen={smallScreen} />
+      {smallScreen && <HeaderHamburger setActivePage={setActivePage} />}
+
     </main>
   );
 }
