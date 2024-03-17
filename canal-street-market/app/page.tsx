@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen transition-custom-transition relative">
       {sectionData.map(section => {
-        const { id, name, } = section;
+        const { Component } = section;
         return (
           <div key={section.id} className={`${activePage === section.name ? "flex-1" : `${smallScreen ? "hidden flex-grow-0" : "block w-16"}`} h-full`}>
 
@@ -41,7 +41,7 @@ export default function Home() {
               activePage={activePage}
               section={section}
             >
-              <div>something</div>
+              <Component />
             </GeneralSectionLayout>
           </div>
         )

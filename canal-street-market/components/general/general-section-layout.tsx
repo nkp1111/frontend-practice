@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 interface SectionParams {
@@ -22,7 +23,15 @@ export default function GeneralSectionLayout({ setActivePage, activePage, sectio
       }}
     >
       {activePage !== section.name ? (
-        <div className='w-full h-screen flex items-center justify-center text-xl tracking-wider capitalize'>
+        <div className='w-full h-screen flex items-center justify-center text-xl tracking-wider capitalize relative'>
+          <div className='absolute top-10'>
+            <Image
+              src={section.logo}
+              alt={"."}
+              width={35}
+              height={35}
+            />
+          </div>
           <span className='rotate-90'>{section.name}</span>
         </div>
       ) : (
