@@ -26,6 +26,16 @@ const config: Config = {
       transitionTimingFunction: {
         "custom-transition": "linear",
       },
+      keyframes: {
+        wave: {
+          to: {
+            'margin-left': '-51%',
+          },
+        },
+      },
+    },
+    animation: {
+      wave: 'wave 1.5s ease-in-out infinite',
     },
   },
   plugins: [],

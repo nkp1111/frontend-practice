@@ -30,11 +30,11 @@ export default function Home() {
 
 
   return (
-    <main className="flex min-h-screen transition-custom-transition relative">
+    <main className="flex min-h-screen transition-custom-transition relative items-stretch overflow-hidden">
       {sectionData.map(section => {
         const { Component } = section;
         return (
-          <div key={section.id} className={`${activePage === section.name ? "flex-1" : `${smallScreen ? "hidden flex-grow-0" : "block w-16"}`} h-full`}>
+          <div key={section.id} className={`${activePage === section.name ? "flex-1" : `${smallScreen ? "hidden flex-grow-0" : "block w-16 "}`} h-screen overflow-y-auto no-scrollbar`}>
 
             <GeneralSectionLayout
               setActivePage={setActivePage}

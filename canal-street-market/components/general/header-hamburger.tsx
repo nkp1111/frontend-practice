@@ -9,7 +9,7 @@ interface HamburgerNavParams {
 
 export default function HeaderHamburger({ setActivePage, showHamburger }: HamburgerNavParams) {
   return (
-    <div className={`fixed top-0 left-0 w-full h-screen flex flex-col gap-5 transition-custom-transition bg-white ${showHamburger ? "hidden" : "block overflow-y-auto pb-5 no-scrollbar"}`}>
+    <div className={`fixed top-0 left-0 w-full h-screen flex flex-col gap-5 transition-custom-transition bg-white ${showHamburger ? "hidden" : "block  pb-5 overflow-y-auto no-scrollbar"}`}>
       {/* grid nav  */}
       <div className={`grid grid-cols-2`}>
         <div
