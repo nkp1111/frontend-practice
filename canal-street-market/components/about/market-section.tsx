@@ -4,6 +4,7 @@ import Image from 'next/image'
 import marketImage from "@/public/about-section/market.jpg"
 import officeImage from "@/public/about-section/office.jpg"
 import workImage from "@/public/about-section/pexels-cowomen-2041393.jpg"
+import locationImage from "@/public/about-section/vector-roadmap-location-map.jpg"
 
 export default function MarketSection() {
   return (
@@ -66,7 +67,7 @@ export default function MarketSection() {
           </article>
         </div>
 
-        <div className='md:mt-20 mt-16 mb-16'>
+        <div className='md:mt-20 mt-16'>
           <div className="flex flex-row justify-between items-center">
             <span className='text-3xl md:text-4xl font-mono flex-1 text-center text-slate-500'>Happy</span>
             <span className='text-4xl sm:text-5xl md:text-7xl xl:text-8xl flex-1 text-center'>Market <br /> Events</span>
@@ -74,7 +75,7 @@ export default function MarketSection() {
           </div>
         </div>
 
-        <div>
+        <div className='my-16'>
           <div>
             <MovingDashedLine dir={"ltr"} />
             <MovingDashedLine dir={"ltr"} />
@@ -102,9 +103,25 @@ export default function MarketSection() {
           </div>
         </div>
 
+        <div className='flex justify-between gap-24 md:flex-row flex-col'>
+          <div className="flex-1 animate_border text-4xl md:text-6xl p-10 text-center flex items-center">
+            <h3>265 Canal St. New York, NY</h3>
+          </div>
+          <div className="flex-1 animate_border flex items-center justify-center">
+            <div className='w-[99%] h-[99%] overflow-hidden'>
+              <Image
+                src={locationImage}
+                alt="."
+                width={550}
+                height={550}
+                className='h-auto'
+              />
+            </div>
+          </div>
+        </div>
 
       </section>
-    </GeneralPaddingX>
+    </GeneralPaddingX >
   )
 }
 
