@@ -1,11 +1,25 @@
 import React from 'react'
+import FrontSection from "./front-section"
+import Image from 'next/image'
+import mainImage from "@/public/about-section/pexels-w-w-2793729.jpg"
+import MarketSection from './market-section'
 
-export default function index({ setActivePage }: { setActivePage: React.Dispatch<React.SetStateAction<string>> }) {
+
+export default function index() {
   return (
-    <div
-      className="transition-custom-transition bg-white cursor-pointer min-h-screen"
-      onClick={() => setActivePage("about")}>
-      About
-    </div>
+    <section>
+      <FrontSection />
+      <div className='h-screen w-full my-10 overflow-hidden relative'>
+        <Image
+          src={mainImage}
+          alt=""
+          width={1000}
+          height={1000}
+          className='h-auto w-full'
+          priority
+        ></Image>
+      </div>
+      <MarketSection />
+    </section>
   )
 }

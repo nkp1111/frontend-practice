@@ -1,15 +1,16 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import About from "@/components/about";
-import Food from "@/components/food";
-import Retail from "@/components/retail";
-import Community from "@/components/community";
 import HeaderHamburger from "@/components/general/header-hamburger";
+import HamburgerMenu from "@/components/general/icons/hamburger";
+import CloseIcon from "@/components/general/icons/closeIcon";
+import GeneralSectionLayout from "@/components/general/general-section-layout";
+import { sectionData } from "@/constant/section-data";
 
 export default function Home() {
   const [activePage, setActivePage] = useState("about");
   const [smallScreen, setSmallScreen] = useState(false);
+  const [showHamburger, setShowHamburger] = useState(true);
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -23,23 +24,39 @@ export default function Home() {
       window.removeEventListener("resize", checkScreenSize);
     }
   }, []);
+  useEffect(() => {
+    if (!smallScreen) setShowHamburger(true);
+  }, [smallScreen])
+
 
   return (
-    <main className="flex min-h-screen transition-custom-transition relative">
-      <div className={`${activePage === "about" ? "flex-1" : `${smallScreen ? "hidden flex-grow-0" : "block flex-[0.05]"}`} h-full`}>
-        <About setActivePage={setActivePage} />
-      </div>
-      <div className={`${activePage === "food" ? "flex-1" : `${smallScreen ? "hidden flex-grow-0" : "block flex-[0.05]"}`} h-full`}>
-        <Food setActivePage={setActivePage} />
-      </div>
-      <div className={`${activePage === "retail" ? "flex-1" : `${smallScreen ? "hidden flex-grow-0" : "block flex-[0.05]"}`} h-full`}>
-        <Retail setActivePage={setActivePage} />
-      </div>
-      <div className={`${activePage === "community" ? "flex-1" : `${smallScreen ? "hidden flex-grow-0" : "block flex-[0.05]"}`} h-full`}>
-        <Community setActivePage={setActivePage} />
-      </div>
+    <main className="flex min-h-screen transition-custom-transition relative items-stretch overflow-hidden">
+      {sectionData.map(section => {
+        const { Component } = section;
+        return (
+          <div key={section.id} className={`${activePage === section.name ? "flex-1" : `${smallScreen ? "hidden flex-grow-0" : "block w-16 "}`} h-screen overflow-y-auto no-scrollbar`}>
 
-      {smallScreen && <HeaderHamburger setActivePage={setActivePage} />}
+            <GeneralSectionLayout
+              setActivePage={setActivePage}
+              activePage={activePage}
+              section={section}
+            >
+              <Component />
+            </GeneralSectionLayout>
+          </div>
+        )
+      })}
+
+      {smallScreen && (
+        <>
+          <HeaderHamburger setActivePage={setActivePage} showHamburger={showHamburger} />
+
+          <div className={`w-10 h-10 cursor-pointer fixed top-8 right-10 transition-custom-transition`}
+            onClick={() => setShowHamburger(pre => !pre)}>
+            {showHamburger ? <HamburgerMenu /> : <CloseIcon />}
+          </div>
+        </>
+      )}
 
     </main>
   );
