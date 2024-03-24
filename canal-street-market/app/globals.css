@@ -40,3 +40,8 @@
 .animate_border:hover {
   animation-play-state: running;
 }
+
+
+.repeating_linear_gradient_bg {
+  background: repeating-linear-gradient(-75deg,transparent, transparent 8px, #aaa 8px, #aaa 9px);
+}

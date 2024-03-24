@@ -3,6 +3,7 @@ import FrontSection from "./front-section"
 import Image from 'next/image'
 import mainImage from "@/public/about-section/pexels-w-w-2793729.jpg"
 import MarketSection from './market-section'
+import Footer from '../general/footer'
 
 
 export default function index() {
@@ -20,6 +21,7 @@ export default function index() {
         ></Image>
       </div>
       <MarketSection />
+      <Footer />
     </section>
   )
 }
