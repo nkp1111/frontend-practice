@@ -43,5 +43,5 @@
 
 
 .repeating_linear_gradient_bg {
-  background: repeating-linear-gradient(-75deg,transparent, transparent 8px, #aaa 8px, #aaa 9px);
+  background: repeating-linear-gradient(-75deg,transparent, transparent 8px, #333 8px, #333 9px);
 }

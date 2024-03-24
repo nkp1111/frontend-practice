@@ -7,7 +7,7 @@ import InstagramIcon from './icons/instagram';
 
 export default function Footer() {
   return (
-    <footer className='my-8'>
+    <footer className='mt-8 pb-8'>
       <GeneralPaddingX>
         <CrossLineBackground />
         <div className='flex flex-col items-center justify-center gap-8 my-8'>
@@ -35,7 +35,7 @@ export default function Footer() {
           <div className='animate_border flex items-center justify-between md:p-10 gap-16 p-5'>
             <p className='text-2xl md:text-3xl'>Stay up to date <br /> with our newsletter</p>
             <form className='flex-1'>
-              <input type="email" name="email" id="email" placeholder='Email' className='w-full border border-black p-4 text-black placeholder:text-black text-xl px-8' />
+              <input type="email" name="email" id="email" placeholder='Email' className='w-full border border-black p-4 text-black placeholder:text-black text-xl px-8 bg-transparent' />
             </form>
           </div>
         </div>

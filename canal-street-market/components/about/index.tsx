@@ -8,7 +8,7 @@ import Footer from '../general/footer'
 
 export default function index() {
   return (
-    <section>
+    <section className='bg-white'>
       <FrontSection />
       <div className='h-screen w-full my-10 overflow-hidden relative'>
         <Image
