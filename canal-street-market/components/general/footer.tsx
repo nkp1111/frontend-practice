@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className='mt-8 pb-8'>
       <GeneralPaddingX>
         <CrossLineBackground />
-        <div className='flex flex-col items-center justify-center gap-8 my-8'>
+        <div className='flex flex-col items-center justify-center gap-8 my-8 py-4'>
           <p className='text-2xl md:text-4xl'>Interested in becoming a vendor?</p>
           <button type="button" className='py-3 px-8 border border-black hover:bg-black hover:text-white transition-all duration-300 ease-linear'>click here</button>
         </div>
