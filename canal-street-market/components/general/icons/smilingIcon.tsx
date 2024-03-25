@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function SmilingIcon({ rotate }: { rotate?: boolean }) {
   return (
-    <svg width="88px" height="90px" viewBox="0 0 88 90" version="1.1" xmlns="http://www.w3.org/2000/svg" className={`${rotate ? "rotate-180 md:scale-[2] sm:scale-150" : "rotate-0 md:scale-[2] sm:scale-150"}`}>
+    <svg width="88px" height="90px" viewBox="0 0 88 90" version="1.1" xmlns="http://www.w3.org/2000/svg" className={`${rotate ? "rotate-180 md:scale-150" : "rotate-0 md:scale-150"}`}>
       <g id="WH_new" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="375-food" transform="translate(-143.000000, -2270.000000)" fill="#000000" fill-rule="nonzero">
           <g id="Group" transform="translate(30.000000, 2195.000000)">
