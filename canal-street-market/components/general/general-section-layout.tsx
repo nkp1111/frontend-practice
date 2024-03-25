@@ -17,7 +17,7 @@ interface SectionParams {
 export default function GeneralSectionLayout({ setActivePage, activePage, section, children }: SectionParams) {
   return (
     <div
-      className={`transition-custom-transition  min-h-screen ${section.baseClass}`}
+      className={`transition-custom-transition overflow-x-hidden min-h-screen ${section.baseClass}`}
       onClick={() => {
         setActivePage(section.name)
       }}
