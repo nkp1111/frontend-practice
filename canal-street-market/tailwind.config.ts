@@ -32,17 +32,15 @@ const config: Config = {
             'margin-left': '-51%',
           },
         },
+        "loop-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-104%)" }
+        }
       },
-    },
-    animation: {
-      wave: 'wave 1.5s ease-in-out infinite',
-      "loop-scroll": "loop-scroll 30s linear infinite",
-    },
-    keyframes: {
-      "loop-scroll": {
-        from: { transform: "translateX(0)" },
-        to: { transform: "translateX(-104%)" }
-      }
+      animation: {
+        wave: 'wave 1.5s ease-in-out infinite',
+        "loop-scroll": "loop-scroll 30s linear infinite",
+      },
     },
   },
   plugins: [],

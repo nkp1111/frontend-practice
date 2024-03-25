@@ -3,11 +3,12 @@ import FrontSection from "./front-section"
 import Image from 'next/image'
 import mainImage from "@/public/about-section/pexels-w-w-2793729.jpg"
 import MarketSection from './market-section'
+import Footer from '../general/footer'
 
 
 export default function index() {
   return (
-    <section>
+    <section className='bg-white'>
       <FrontSection />
       <div className='h-screen w-full my-10 overflow-hidden relative'>
         <Image
@@ -20,6 +21,7 @@ export default function index() {
         ></Image>
       </div>
       <MarketSection />
+      <Footer />
     </section>
   )
 }
